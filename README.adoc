@@ -28,7 +28,17 @@ toc::[]
 
 == Local and CCloud 
 
+----
+run zookeeper
+run kafka
+run schema registry 
+to use on windows put bat file to confluent/bin/windows
+use cmd navigate to windows folder run command schema-registry-start.bat <path to schema registry properties>
+----
+
 https://www.confluent.io/blog/schema-registry-avro-in-spring-boot-application-tutorial[Read here]
+
+
 
 == Deploy app to PAS
 
