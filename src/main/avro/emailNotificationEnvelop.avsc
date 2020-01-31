@@ -1,0 +1,17 @@
+{
+  "namespace": "io.confluent.developer",
+  "type" : "record",
+  "name" : "EmailNotificationEnvelop",
+  "doc" : "Email notification message envelop",
+  "subject" : "logistica.trnotsvc.email-notification.v1",
+  "fields" : [ {
+    "name" : "metadata",
+    "type" : "string",
+	"avro.java.string": "String",
+    "doc"  : "metadata as per PIPE convention"
+  }, {
+    "name" : "emailNotification",
+    "type" : "EmailNotification",
+	"doc"  : "Email notification payload"
+  } ]
+}

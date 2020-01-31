@@ -1,0 +1,77 @@
+{
+  "namespace": "io.confluent.developer",
+  "type": "record",
+  "name": "EmailNotification",
+  "doc": "Schema representing contract for outbound email communication",
+  "fields": [
+    {
+      "name": "from",
+      "type": "string",
+      "doc": "from email alias"
+    },
+    {
+      "name": "bcc",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "string"
+        }
+      ],
+      "default": null,
+      "doc": "blind carbon copy(bcc) email addresses"
+    },
+    {
+      "name": "cc",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "string"
+        }
+      ],
+      "default": null,
+      "doc": "email addresses in cc"
+    },
+    {
+      "name": "to",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "string"
+        }
+      ],
+      "default": null,
+      "doc": "email addresses in to field"
+    },
+    {
+      "name": "subject",
+      "type": "string",
+      "doc": "subject of the email"
+    },
+    {
+      "name": "attachments",
+      "type": [
+        "null",
+        {
+          "type": "map",
+          "values": "string"
+        }
+      ],
+      "default": null,
+      "doc": "signed urls of file attachments as key value pair"
+    },
+    {
+      "name": "body",
+      "type": "string",
+      "doc": "email body"
+    },
+    {
+      "name": "isSynthetic",
+      "type": "boolean",
+      "default": false,
+      "doc": "flag to support synthetic transaction monitoring"
+    }
+  ]
+}
